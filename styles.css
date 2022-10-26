@@ -12,15 +12,15 @@ element::-webkit-scrollbar {
 .search-results {
     max-height: 360px;
     width: auto;
-    background-color: #572d7b;
+    height:auto;
+    background-color: #464646;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     color: white;
     text-align: left;
     overflow: scroll;
-    padding: 10px;
 }
-
+/* The styling logic for the inner divs within the sear */
 .theSearchDiv {
     display: flex;
     height: 100px;
@@ -28,11 +28,13 @@ element::-webkit-scrollbar {
     border-radius: 30px;
     justify-content: space-between;
     align-items: center;
+    transition: 0.3s ease;
     padding: 10px;
 }
 
 .theSearchDiv:hover {
-    background-color: #8561a5;
+    background-color: #ca5858;
+    transform: scale(98%)
 }
 
 .theItemDiv {
@@ -87,7 +89,7 @@ element::-webkit-scrollbar {
     height: 46px;
     padding: 10px 26px;
     border: none;
-    background: #7DE5ED;
+    background: #8a1b1b;
     border-radius: 30px;
     position: absolute;
     top: 0;

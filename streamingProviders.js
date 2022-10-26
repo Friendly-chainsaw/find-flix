@@ -1,14 +1,10 @@
-/**
- * Returns an object with the movie providers.
- * @param {number} movie_id the id for the movie we want the providers
- * @return {object} returns an object with movie providers
- */
 async function getStreamingProviders(movie_id)
 {
     if(movie_id){
         try{
             const response = await fetch(`${BASE_URL}/movie/${movie_id}/watch/providers?api_key=${config.api_key}`);
             const data = await response.json();
+            console.log(data?.results)
             return data?.results;
         } catch(err){
             console.log(err);
