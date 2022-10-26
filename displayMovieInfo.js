@@ -13,6 +13,6 @@ function createFlippableImage(movieInfo) {
     const frontOfImageDiv = document.createElement("div")
     const backOfImageDiv = document.createElement("div")
 
-
+    
 
 }
