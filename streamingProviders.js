@@ -1,17 +1,13 @@
-const BASE_URL = config.api_base_url;
-const API_KEY = config.api_key;
-
-function getStreamingProviders(movie_id){
-    fetch(`${BASE_URL}/movie/${movie_id}/watch/providers`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        return [];
-    })
-    .catch(err => {
-        console.log(err);
-    });
+async function getStreamingProviders(movie_id)
+{
+    if(movie_id){
+        try{
+            const response = await fetch(`${BASE_URL}/movie/${movie_id}/watch/providers?api_key=${config.api_key}`);
+            const data = await response.json();
+            return data?.results;
+        } catch(err){
+            console.log(err);
+            return "Something happen, please try again later!";
+        }
+    }
 }
-
-
-module.exports = getStreamingProviders;
