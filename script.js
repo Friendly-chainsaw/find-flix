@@ -21,8 +21,8 @@ async function searchMovies(searchKeyWord, page) {
             box.remove();
         });
         for (let i = 0; i < data.length; i++) {
-            displayStreamingServices(["Netflix"], data.title)
-
+            console.log(data)
+            displayStreamingServices(["netflix", "apple tv", "amazon prime", "paramount+", "youtube"], data[i].title)
         }
     } catch (error) {
         const para = document.createElement("p");

@@ -1,26 +1,30 @@
 const streamingServices = {
-    "Netflix": "icons8-netflix-desktop-app.svg",
-    "Amazon Prime": "icons8-amazon-prime-video.svg",
-    "Disney+": "icons8-disney-plus.svg",
-    "Paramount+": "icons8-paramount-plus.svg",
-    "Apple TV": "icons8-apple-tv.svg",
-    "Youtube": "icons8-youtube.svg",
+    "netflix": "icons8-netflix-desktop-app.svg",
+    "amazon prime": "icons8-amazon-prime-video.svg",
+    "disney+": "icons8-disney-plus.svg",
+    "paramount+": "icons8-paramount-plus.svg",
+    "apple tv": "icons8-apple-tv.svg",
+    "youtube": "icons8-youtube.svg",
 }
 
 function displayStreamingServices(retrievedStreamingServices, movieTitle) {
-    const container = document.createElement("div");
-    container.classList.add("theItemDiv")
+    const searchResult = document.createElement("div");
+    searchResult.classList.add("theSearchDiv")
     const title = document.createElement("p")
     title.innerHTML = movieTitle
-    container.appendChild(title)
-    for (let service in retrievedStreamingServices) {
+    searchResult.appendChild(title)
+    const iconDiv = document.createElement("div");
+    iconDiv.classList.add("theItemDiv")
+    for (let i = 0; i < retrievedStreamingServices.length; i++) {
         const newStreamingServiceImage = document.createElement("img")
-        console.log(streamingServices[service])
-        newStreamingServiceImage.src = `./svgIcons/${streamingServices[service]}`
+        console.log(retrievedStreamingServices[i])
+        console.log(streamingServices[retrievedStreamingServices[i]])
+        newStreamingServiceImage.src = `./svgIcons/${streamingServices[retrievedStreamingServices[i]]}`
         newStreamingServiceImage.classList.add("streamingServiceIcon")
-        container.appendChild(newStreamingServiceImage)
+        iconDiv.appendChild(newStreamingServiceImage)
     }
 
+    searchResult.appendChild(iconDiv)
     const movies = document.getElementById("movies");
-    movies.appendChild(container);
+    movies.appendChild(searchResult);
 }
