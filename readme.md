@@ -39,7 +39,7 @@ This was created by the Friendly-chainsaw, Copyright © 2022 Friendly-chainsaw.
 
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-![JavaScript]({https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E})
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 <!-- ### Diagrams
 - <a href="">Use Case Diagram</a>
