@@ -14,7 +14,7 @@ const streamingServices = {
 function displayStreamingServices(retrievedStreamingServices, movieTitle) {
     const searchResult = document.createElement("div");
     searchResult.classList.add("theSearchDiv")
-    const title = document.createElement("p")
+    const title = document.createElement("h3")
     title.innerHTML = movieTitle
     searchResult.appendChild(title)
     const iconDiv = document.createElement("div");
