@@ -9,14 +9,13 @@ const API_KEY = config.api_key
 
 const fetch = require('isomorphic-fetch')
 
-async function getStreamingProviders(movie_id, regionID)
-/**
- * Returns an object with the movie providers.
- * @param {number} movie_id the id for the movie we want the providers
- * @return {object} returns an object with movie providers
- */
-async function getStreamingProviders(movie_id)
-{
+async function getStreamingProviders(movie_id, regionID) {
+    /**
+     * Returns an object with the movie providers.
+     * @param {number} movie_id the id for the movie we want the providers
+     * @return {object} returns an object with movie providers
+     */
+
     if(movie_id){
         try{
             var finalFormat = {}
