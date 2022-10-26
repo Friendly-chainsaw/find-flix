@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>FindFlix!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./popcorn.png" type="image/x-icon" />
+  </head>
+  <body class="background-dark">
+    <div>
+      <h1>FindFlix!</h1>
+      <form onsubmit="return false" id="form">
+        <input type="search" id="query" name="q" placeholder="Search..." />
+        <button type="submit" id="search">Search</button>
+      </form>
+      <div id="movies" class="search-results"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
