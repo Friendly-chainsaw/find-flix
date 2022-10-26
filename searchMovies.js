@@ -14,8 +14,8 @@ async function searchMovies(searchKeyWord, page) {
         boxes.innerHTML = ""
         for (let i = 0; i < data.length; i++) {
             console.log(data)
-            getStreamingProviders(data[i].id)
-            displayStreamingServices(["netflix", "apple tv", "amazon prime", "paramount+", "youtube"], data[i].title)
+            const streamingProviders = getStreamingProviders(data[i].id)
+            displayStreamingServices(streamingProviders["flatrate"], data[i].title, data[i].id)
         }
     } catch (error) {
         const para = document.createElement("p");
