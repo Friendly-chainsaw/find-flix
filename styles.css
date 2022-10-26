@@ -2,7 +2,8 @@
     display: none;
 }
 .movies {
-
+    border: 5px;
+    border-color: red;
 }
 
 element::-webkit-scrollbar {
@@ -10,17 +11,17 @@ element::-webkit-scrollbar {
 }
 
 .search-results {
-    max-height: 360px;
+    max-height: 400px;
     width: auto;
-    background-color: #572d7b;
+    height:auto;
+    background-color: transparent;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     color: white;
     text-align: left;
     overflow: scroll;
-    padding: 10px;
 }
-
+/* The styling logic for the inner divs within the sear */
 .theSearchDiv {
     display: flex;
     height: 100px;
@@ -28,11 +29,15 @@ element::-webkit-scrollbar {
     border-radius: 30px;
     justify-content: space-between;
     align-items: center;
+    transition: 0.3s ease;
+    border: 1px solid;
+    border-color: red;
     padding: 10px;
 }
 
 .theSearchDiv:hover {
-    background-color: #8561a5;
+    background-color: rgb(34,34,34);
+    transform: scale(98%)
 }
 
 .theItemDiv {
@@ -91,7 +96,7 @@ element::-webkit-scrollbar {
     height: 46px;
     padding: 10px 26px;
     border: none;
-    background: #7DE5ED;
+    background: rgb(201, 54, 53);
     border-radius: 30px;
     position: absolute;
     top: 0;

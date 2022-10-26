@@ -1,3 +1,5 @@
+
+//List of temporary streaming services for testing purposes
 const streamingServices = {
     "netflix": "icons8-netflix-desktop-app.svg",
     "amazon prime": "icons8-amazon-prime-video.svg",
@@ -7,10 +9,12 @@ const streamingServices = {
     "youtube": "icons8-youtube.svg",
 }
 
+//Displays the available streaming services within the search bar functionality
+//param(retrievedStreamingServices List, movieTitle string)
 function displayStreamingServices(retrievedStreamingServices, movieTitle) {
     const searchResult = document.createElement("div");
     searchResult.classList.add("theSearchDiv")
-    const title = document.createElement("p")
+    const title = document.createElement("h3")
     title.innerHTML = movieTitle
     searchResult.appendChild(title)
     const iconDiv = document.createElement("div");
