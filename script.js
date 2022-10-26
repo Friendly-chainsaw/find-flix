@@ -16,7 +16,8 @@ async function searchMovies(searchKeyWord, page) {
         });
         for (let i = 0; i < data.length; i++) {
             const para = document.createElement("p");
-            const dataID = console.log(data[i].id);
+            const dataID = data[i].id;
+            getStreamingProviders(dataID);
             const node = document.createTextNode(data[i].original_title);
             para.setAttribute("class", "movie");
             para.appendChild(node);
@@ -43,6 +44,9 @@ async function searchMovies(searchKeyWord, page) {
 document.getElementById("search").addEventListener("click", function () {
     searchMovies(document.getElementById("query").value, 1);
 });
+
+
+
 
 //document.getElementById("query").addEventListener("keydown", function () {
 //    searchMovies(document.getElementById("query").value, 1);
