@@ -1,6 +1,23 @@
+
+.movies {
+
+}
+
 .search-results {
     max-height: 200px;
     width: 50%;
     background-color: rgb(121, 212, 255);
     overflow: scroll;
+}
+
+.theItemDiv {
+    display: flex;
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.streamingServiceIcon {
+    width: 75px;
+    height: 75px
 }

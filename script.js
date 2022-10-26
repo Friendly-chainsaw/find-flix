@@ -1,3 +1,9 @@
+const config = {
+    api_key: "5dcfa53a01aa624d368df66c96439139",
+    api_base_url: "https://api.themoviedb.org/3/",
+    image_base_url: "https://image.tmdb.org/t/p/w1280",
+};
+
 const BASE_URL = config.api_base_url;
 const API_KEY = config.api_key;
 
@@ -15,13 +21,8 @@ async function searchMovies(searchKeyWord, page) {
             box.remove();
         });
         for (let i = 0; i < data.length; i++) {
-            const para = document.createElement("p");
-            const dataID = console.log(data[i].id);
-            const node = document.createTextNode(data[i].original_title);
-            para.setAttribute("class", "movie");
-            para.appendChild(node);
-            const element = document.getElementById("movies");
-            element.appendChild(para);
+            displayStreamingServices(["Netflix"], data.title)
+
         }
     } catch (error) {
         const para = document.createElement("p");
@@ -36,7 +37,6 @@ async function searchMovies(searchKeyWord, page) {
             document.getElementById("error").remove();
         }, 1000);
     }
-    console.log(data);
     return data;
 }
 
