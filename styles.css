@@ -13,7 +13,7 @@ element::-webkit-scrollbar {
     max-height: 360px;
     width: auto;
     height:auto;
-    background-color: #464646;
+    background-color: black;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     color: white;
@@ -33,7 +33,7 @@ element::-webkit-scrollbar {
 }
 
 .theSearchDiv:hover {
-    background-color: #ca5858;
+    background-color: rgb(68, 0, 0);
     transform: scale(98%)
 }
 
@@ -53,16 +53,20 @@ element::-webkit-scrollbar {
 
 .background-dark{
     /* background: linear-gradient(#1d719e, #572d7b); */
-    background: linear-gradient(#1d719e, #572d7b) no-repeat center center fixed;
+    background: linear-gradient(#000000, #252525) no-repeat center center fixed;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
 }
 
-
 #title{
-    text-align: center;
-    color: white;
+    max-height: auto;
+    max-width: auto;
+    width: 520px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-section{
@@ -89,7 +93,7 @@ element::-webkit-scrollbar {
     height: 46px;
     padding: 10px 26px;
     border: none;
-    background: #8a1b1b;
+    background: rgb(201, 54, 53);
     border-radius: 30px;
     position: absolute;
     top: 0;
