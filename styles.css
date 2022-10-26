@@ -51,16 +51,20 @@ element::-webkit-scrollbar {
 
 .background-dark{
     /* background: linear-gradient(#1d719e, #572d7b); */
-    background: linear-gradient(#1d719e, #572d7b) no-repeat center center fixed;
+    background: linear-gradient(#000000, #252525) no-repeat center center fixed;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
 }
 
-
 #title{
-    text-align: center;
-    color: white;
+    max-height: auto;
+    max-width: auto;
+    width: 520px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-section{
