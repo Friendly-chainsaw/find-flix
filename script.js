@@ -17,9 +17,7 @@ async function searchMovies(searchKeyWord, page) {
         data = responseData?.results;
 
         const boxes = document.querySelector("#movies");
-        for (let item of boxes.children) {
-            item.remove();
-        }
+        boxes.innerHTML = ""
         for (let i = 0; i < data.length; i++) {
             console.log(data)
             getStreamingProviders(data[i].id)
