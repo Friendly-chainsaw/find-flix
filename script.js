@@ -16,12 +16,13 @@ async function searchMovies(searchKeyWord, page) {
         const responseData = await response.json();
         data = responseData?.results;
 
-        const boxes = document.querySelectorAll(".movie");
-        boxes.forEach((box) => {
-            box.remove();
-        });
+        const boxes = document.querySelector("#movies");
+        for (let item of boxes.children) {
+            item.remove();
+        }
         for (let i = 0; i < data.length; i++) {
             console.log(data)
+            getStreamingProviders(data[i].id)
             displayStreamingServices(["netflix", "apple tv", "amazon prime", "paramount+", "youtube"], data[i].title)
         }
     } catch (error) {
@@ -43,6 +44,9 @@ async function searchMovies(searchKeyWord, page) {
 document.getElementById("search").addEventListener("click", function () {
     searchMovies(document.getElementById("query").value, 1);
 });
+
+
+
 
 //document.getElementById("query").addEventListener("keydown", function () {
 //    searchMovies(document.getElementById("query").value, 1);
