@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='styles.css' rel="stylesheet">
+    <link href='css/styles.css' rel="stylesheet">
     <title>Top Rated</title>
 </head>
 <body class="background-dark">
     <img id="title" src="./logosAndIcons/qualityLogo.png" alt=""/>
     <h1></h1>
 
+    <div id="card-div"></div>
+    <div class="pagination">
+        <a href=""><i class="fas fa-chevron-left"></i></a>
+        <a class="pagination-number">1</a>
+        <a class="pagination-number">2</a>
+        <a class="pagination-number">3</a>
+        <a class="pagination-number">4</a>
+        <a class="pagination-number">5</a>
+        <a class="pagination-number">6</a>
+        <a class="pagination-number"><i class="fas fa-chevron-right"></i></a>
+        <div class="bar"></div>
+      </div>
     <script src="./config.js"></script>
     <script src="./src/getLocale.js"></script>
     <script src="./src/streamingProviders.js"></script>
@@ -21,6 +33,6 @@
     <script src="./src/searchMovies.js"></script>
     <script src="./src/common.js"></script>
     <script src="./src/getBestRatedMovies.js"></script>
-    <script src="./src/displayBestRatedMovies.js"></script>
+    <script src="./src/displayBestMovies.js"></script>
 </body>
 </html>
