@@ -1,3 +1,7 @@
+window.addEventListener("load", (event) => {
+    displayBestMovies(1)
+})
+
 async function displayBestMovies(page){
     const result = await getBestRatesMovies(page);
     console.log(result);

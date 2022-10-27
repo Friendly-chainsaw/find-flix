@@ -27,9 +27,8 @@
 }
 
 .card-image-findflix-base {
-    width: 60%;
+    width: 70%;
     height: auto;
-    left: 0px;
     z-index: 9px;
     -webkit-mask-image: linear-gradient(to bottom, black 0.001%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 0.01%, transparent 100%);

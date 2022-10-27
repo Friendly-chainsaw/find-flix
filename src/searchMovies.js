@@ -14,8 +14,7 @@ window.addEventListener("load", (event) => {
 */
 function createErrorMessage(errorMessage) {
   const para = document.createElement("p");
-  const node = document.createTextNode(errorMessage
-  );
+  const node = document.createTextNode(errorMessage);
   para.setAttribute("id", "error");
   para.appendChild(node);
   const element = document.getElementById("movies");
