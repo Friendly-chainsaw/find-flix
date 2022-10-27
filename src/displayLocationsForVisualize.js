@@ -8,34 +8,28 @@ async function displayLocationsForVisualize(movie_id){
     if(providers){
         displayResult.classList.add("visualize-info");
 
-        const movieName = document.createElement("h1");
-        movieName.innerHTML = await getMovieName(movie_id);
-        displayResult.appendChild(movieName);
+        displayResult.appendChild(createText("h1", await getMovieName(movie_id)));
 
         if(!providers.buy && !providers.flatrate && !providers.rent){
-            const message = document.createElement("h2");
-            message.innerHTML = "Sorry! No information available for this film!";
-            displayResult.appendChild(message);
+
+            displayResult.appendChild(createText("h2", "Sorry! No information available for this film!"));
+
         } else {
             if(providers.buy.length > 0){
-                const buy = document.createElement("h2");
-                buy.innerHTML = "Buy";
-                displayResult.appendChild(buy);
+
+                displayResult.appendChild(createText("h2", "Buy"));
                 getProviders(providers.buy);
             }
 
             if(providers.flatrate.length > 0){
 
-                const stream = document.createElement("h2");
-                stream.innerHTML = "Stream";
-                displayResult.appendChild(stream);
+                displayResult.appendChild(createText("h2", "Stream"));
                 getProviders(providers.flatrate);
             }
 
             if(providers.rent.length > 0){
-            rent.innerHTML = "Rent";
-            displayResult.appendChild(rent);
-            getProviders(providers.rent);
+                displayResult.appendChild(createText("h2", "Rent"));
+                getProviders(providers.rent);
         }
     }
     }
@@ -54,10 +48,4 @@ async function getProviders(arrayProviders){
             displayResult.appendChild(newStreamingServiceImage);
         }
     }
-}
-
-function createText(textHTML, text){
-    const result = document.createElement(textHTML);
-    text.innerHTML = text;
-    return result;
 }
