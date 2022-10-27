@@ -1,4 +1,11 @@
-async function getStreamingProviders(movie_id)
+// const fetch = require('isomorphic-fetch')
+    /**
+     * Returns an object with the movie providers.
+     * @param {number} movie_id the id for the movie we want the providers
+     * @return {object} returns an object with movie providers
+     */
+
+    async function getStreamingProviders(movie_id, regionID) {
 {
     if(movie_id){
         try{
