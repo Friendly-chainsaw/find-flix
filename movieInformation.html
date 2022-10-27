@@ -13,7 +13,23 @@
     <title id="about">About Movie</title>
   </head>
   <body class="background-dark">
-    <button id="backbutton"><img class="backbuttonImage" src="./logosAndIcons/returnIcon.png"></button>
+    <div class="container">
+      <img
+        id="about-title"
+        src="./logosAndIcons/qualityLogo.png"
+        class="subPageTitle"
+        alt=""
+      />
+      <a href="./index.html">
+        <span class="link"></span>
+      </a>
+    </div>
+
+    <div class="button">
+      <button id="backbutton">
+        <img class="backbuttonImage" src="./logosAndIcons/returnIcon.png" />
+      </button>
+    </div>
     <div id="flipImageOuterDivID" class="flipImageOuterDiv"></div>
     <div class="grid">
       <div></div>
@@ -30,5 +46,5 @@
     <script src="./src/common.js"></script>
     <script src="./src/getBestRatedMovies.js"></script>
     <script src="./src/displayBestMovies.js"></script>
-</body>
+  </body>
 </html>
