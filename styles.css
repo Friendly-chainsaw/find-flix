@@ -20,14 +20,11 @@ element::-webkit-scrollbar {
     max-width: 86px;
 }
 
-
 .visualize-info{
-    background-color: white;
-    position: absolute;
-    right: 18px;
-    top: 44rem;
-    padding: 33px;
-    border-top:5px solid rgb(201, 54, 53);
+    background-color: off;
+    color: white;
+    position: relative;
+    left: 31rem;
 }
 
 .search-results {
