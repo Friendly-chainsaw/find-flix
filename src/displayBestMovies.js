@@ -12,6 +12,7 @@ async function displayBestMovies(page){
     for(let i = 0; i< result.length; i++){
 
         const newCard = document.createElement("div");
+        newCard.setAttribute("onclick", "location.href='movieInformation.html?movieID=${movieID}")
         newCard.classList.add("card");
         var img = document.createElement('img');
         if (result[i].backdrop_path === null) {
@@ -25,7 +26,6 @@ async function displayBestMovies(page){
         var cardText = createText("h2", result[i].name)
         cardText.classList.add("card-text")
         newCard.appendChild(cardText);
-
         body.appendChild(newCard);
     }
 

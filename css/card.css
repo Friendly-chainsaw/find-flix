@@ -55,3 +55,7 @@
     opacity: 0.9;
     transition: all 0.1s;
 }
+
+.card:active {
+    transform: scale(98%);
+}
