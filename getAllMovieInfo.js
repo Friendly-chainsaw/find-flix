@@ -24,3 +24,18 @@ async function getAllMovieInfoById(movie_id){
 
     }
 }
+
+
+async function getMovieName(movie_id){
+    if(movie_id){
+        try{
+            const response = await fetch(`${BASE_URL}/movie/${movie_id}?api_key=${config.api_key}&language=en-US`);
+            const data = await response.json();
+            return result.title;
+        } catch (err){
+            console.log(err);
+            return "Something happen, please try again later!";
+        }
+
+    }
+}
