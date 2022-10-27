@@ -1,0 +1,16 @@
+.card{
+    background-color: white;
+    border-top:5px solid rgb(201, 54, 53);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#card-div{
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+
+.card-image{
+    max-width: 14rem;
+}
