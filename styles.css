@@ -133,13 +133,28 @@ element::-webkit-scrollbar {
     color: #fff;
 }
 
-#form {
+.formStyle {
+    /*margin-top: 20%;*/
     margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
-    top: 0;
-    left: 0;
+    /*width: 60%*/
+    transition: all 0.6s;
+    top: 0px;
+    left: 0px;
+    width: 100%
 }
 
+
+/*
+.formStyle.formAnimation{
+    margin-top: 30px;
+    top: 0px;
+    left: 0px;
+    width: 100%
+}
+*/
 
 .flipImageOuterDiv {
     background-color: transparent;
@@ -190,14 +205,13 @@ element::-webkit-scrollbar {
     height: 50px;
     text-align: center;
     align-items: center;
-    vertical-align: middle;
     border: none;
     border-radius: 5px;
     font-size: 30px;
     background-color: #252525;
     color: antiquewhite;
     overflow: hidden;
-    transition: all 0.5s;
+    transition: all 0.6s;
 }
 #backbutton:hover {
     border-radius: 50%;
