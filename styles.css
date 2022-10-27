@@ -15,7 +15,7 @@ element::-webkit-scrollbar {
 }
 
 .providers{
-    border-radius: 30px;
+    border-radius: 18px;
     margin-left: 5px;
     max-width: 86px;
 }
@@ -58,10 +58,12 @@ element::-webkit-scrollbar {
     border-color: red;
     padding: 10px;
     transform: scale(0.9);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .theSearchDiv:hover {
-    background-color: rgb(34,34,34);
+    background: rgb(34,34,34);
+    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgb(34,34,34), transparent);
     transform: scale(98%);
 }
 .theSearchDiv:active {
@@ -71,17 +73,14 @@ element::-webkit-scrollbar {
 
 .theItemDiv {
     width: auto;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .streamingServiceIcon {
     width: 75px;
     height: 75px;
     margin: 0;
-    border-radius: 10px;
+    border-radius: 18px;
+    margin-left:5px;
 }
 
 .background-dark{
@@ -136,13 +135,28 @@ element::-webkit-scrollbar {
     color: #fff;
 }
 
-#form {
+.formStyle {
+    /*margin-top: 20%;*/
     margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
-    top: 0;
-    left: 0;
+    /*width: 60%*/
+    transition: all 0.6s;
+    top: 0px;
+    left: 0px;
+    width: 100%
 }
 
+
+/*
+.formStyle.formAnimation{
+    margin-top: 30px;
+    top: 0px;
+    left: 0px;
+    width: 100%
+}
+*/
 
 .flipImageOuterDiv {
     background-color: transparent;
@@ -185,4 +199,26 @@ element::-webkit-scrollbar {
     transform: rotateY(180deg);
     background-color: red;
     color: white
+}
+
+#backbutton {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    background-color: #252525;
+    color: antiquewhite;
+    overflow: hidden;
+    transition: all 0.6s;
+}
+#backbutton:hover {
+    border-radius: 50%;
+}
+.backbuttonImage {
+    width: 60%;
+    height: 60%;
 }

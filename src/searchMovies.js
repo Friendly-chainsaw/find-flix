@@ -1,5 +1,29 @@
 const BASE_URL = config.api_base_url;
 const API_KEY = config.api_key;
+/*
+window.addEventListener("load", (event) => {
+    const URLparams = URLSearchParams(window.location.search);
+    const searchQuery = URLparams.get("searchQuery")
+
+    if (searchQuery !== undefined) {
+        searchMovies(searchQuery, 1);
+        const searchBar = document.getElementById("query")
+        searchBar.value = searchQuery;
+    }
+})
+*/
+function createErrorMessage(errorMessage) {
+  const para = document.createElement("p");
+  const node = document.createTextNode(errorMessage
+  );
+  para.setAttribute("id", "error");
+  para.appendChild(node);
+  const element = document.getElementById("movies");
+  element.appendChild(para);
+  setTimeout(() => {
+    document.getElementById("error").remove();
+  }, 1000);
+}
 
 async function searchMovies(searchKeyWord, page) {
   let data = [];
@@ -14,31 +38,27 @@ async function searchMovies(searchKeyWord, page) {
     boxes.innerHTML = "";
     for (let i = 0; i < data.length; i++) {
       console.log(data);
-      const streamingProviders = getStreamingProviders(data[i].id, getLocale());
+      const streamingProviders = await getStreamingProviders(data[i].id, getLocale());
       displayStreamingServices(
         streamingProviders["flatrate"],
         data[i].title, data[i].id);
     }
   } catch (error) {
-    const para = document.createElement("p");
-    const node = document.createTextNode(
-      "Oops! Try a different keyword or phrase!"
-    );
-    para.setAttribute("id", "error");
-    para.appendChild(node);
-    const element = document.getElementById("movies");
-    element.appendChild(para);
-    setTimeout(() => {
-      document.getElementById("error").remove();
-    }, 1000);
+    createErrorMessage("Oops! Try another keyword of phrase")
   }
   return data;
 }
 
+
 document.getElementById("search").addEventListener("click", function () {
-  searchMovies(document.getElementById("query").value, 1);
+  const str = document.getElementById("query").value;
+  if (str === null || str.match(/^ *$/) !== null) { createErrorMessage("Oops! The search bar appears to be empty.") }
+  else {searchMovies(str, 1);}
 });
 
+document.getElementById("form").addEventListener("active", () => {
+  document.getElementById("form").classList.toggle("formAnimation")
+})
 // document.getElementById("query").addEventListener("keydown", function () {
 //   if (document.getElementById("query").value.length != 0) {
 //     // doesn't allow app to query the api unless the text box is !empty.
