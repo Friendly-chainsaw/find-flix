@@ -13,8 +13,7 @@ async function searchMovies(searchKeyWord, page) {
         const boxes = document.querySelector("#movies");
         boxes.innerHTML = ""
         for (let i = 0; i < data.length; i++) {
-            console.log(data)
-            const streamingProviders = getStreamingProviders(data[i].id)
+            const streamingProviders = await getStreamingProviders(data[i].id, getLocale())
             displayStreamingServices(streamingProviders["flatrate"], data[i].title, data[i].id)
         }
     } catch (error) {
