@@ -9,29 +9,25 @@
     />
     <title>FindFlix!</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="./popcorn.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./logosAndIcons/popcorn.png" type="image/x-icon" />
   </head>
   <body class="background-dark">
     <div class="main-section">
       <!-- <h1 id="title">FindFlix!</h1> -->
-      <img id="title" src="./qualityLogo.png" alt=""/>
+      <img id="title" src="./logosAndIcons/qualityLogo.png" alt=""/>
       <form onsubmit="return false" id="form">
         <input type="search" id="query" name="q" placeholder="Search..." />
         <button type="submit" id="search">Search</button>
       </form>
       <div id="movies" class="search-results"></div>
-      <div class="grid">
-        <div></div>
-        <div id="providers"></div>
-    </div>
     </div>
     <script src="./config.js"></script>
-    <script src="./streamingProviders.js"></script>
     <script src="./getLocale.js"></script>
-    <script src="./searchMovies.js"></script>
+    <script src="./streamingProviders.js"></script>
     <script src="./getAllMovieInfo.js"></script>
-    <script src="./displayStreamingProviders.js"></script>
     <script src="./displayMovieInfo.js"></script>
+    <script src="./displayStreamingProviders.js"></script>
     <script src="./displayLocationsForVisualize.js"></script>
+    <script src="./searchMovies.js"></script>
   </body>
 </html>
