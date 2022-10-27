@@ -6,7 +6,6 @@
      */
 
     async function getStreamingProviders(movie_id, regionID) {
-{
     if(movie_id){
         try{
             const response = await fetch(`${BASE_URL}/movie/${movie_id}/watch/providers?api_key=${config.api_key}`)
