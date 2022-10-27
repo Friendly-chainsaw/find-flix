@@ -1,8 +1,8 @@
 window.addEventListener("load", (event) => {
     handleDisplayingInfo()
 })
-
 async function handleDisplayingInfo() {
+
 
     const URLparams = new URLSearchParams(window.location.search);
     const movieID = URLparams.get("movieID")

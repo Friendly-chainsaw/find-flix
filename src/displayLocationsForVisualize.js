@@ -30,9 +30,9 @@ async function displayLocationsForVisualize(movie_id){
             if(providers.rent.length > 0){
                 displayResult.appendChild(createText("h2", "Rent"));
                 getProviders(providers.rent);
+            }
         }
     }
-  }
 }
 
 async function getProviders(arrayProviders) {
@@ -52,4 +52,3 @@ function createText(textHTML, text) {
   text.innerHTML = text;
   return result;
 }
-
