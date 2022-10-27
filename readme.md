@@ -19,8 +19,12 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul><li><a href="#built-with">Built With</a></li></ul>
+      <ul>
+        <li><a href="#built-with">Technology used</a></li>
+      </ul>
     </li>
+    <li><a href="#license">Usage</a></li>
+    <li><a href="#license">Contributors</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -50,7 +54,8 @@ This was created by the Friendly-chainsaw, Copyright © 2022 Friendly-chainsaw.
 ## 💻 Usage
 
 The information used is provided by The Movie Database API.
-In the search input you can search for a film
+In the search input you can search for a movie. To see more information, click on the movie you want to know about.
+Another tab will open with the title, the providers availables separated by Buy, rent or Stream.
 
 ## 👩‍👩‍👧‍👧 Contributors
 
