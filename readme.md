@@ -2,7 +2,7 @@
 <p align="center">
   <a href="https://github.com/Friendly-chainsaw/find-flix.git"></a>
 
-  <h1 align="center">FindFlix!<img style="width: 50px" src="logosAndicons/popcorn.png"></h1>
+  <h1 align="center">FindFlix!<img style="width: 50px" src="logosAndIcons/popcorn.png"></h1>
 
   <p align="center">
     The web you can trust to find the movie to watch tonigh.
