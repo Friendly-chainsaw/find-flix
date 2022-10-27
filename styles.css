@@ -9,6 +9,26 @@
 element::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
+.grid{
+    display: grid;
+    grid-auto-columns: 50% 50%;
+}
+
+.providers{
+    border-radius: 30px;
+    margin-left: 5px;
+    max-width: 86px;
+}
+
+
+.visualize-info{
+    background-color: white;
+    position: absolute;
+    right: 18px;
+    top: 44rem;
+    padding: 33px;
+    border-top:5px solid rgb(201, 54, 53);
+}
 
 .search-results {
     padding-top: 100px;

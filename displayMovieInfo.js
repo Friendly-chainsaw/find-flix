@@ -12,6 +12,7 @@ async function handleDisplayingInfo() {
     console.log("movieInfo", movieInfo)
 
     createFlippableImage(movieInfo)
+    displayLocationsForVisualize(movieID)
     //displayBuyRentStreamInfo(movieProviders)
 }
 
