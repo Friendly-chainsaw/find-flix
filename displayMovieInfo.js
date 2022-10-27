@@ -11,6 +11,9 @@ async function handleDisplayingInfo() {
     const movieProviders = await getStreamingProviders(movieID)
     console.log("movieInfo", movieInfo)
 
+    const backButton = document.querySelector("#backbutton")
+    backButton.setAttribute("onclick", `location.href='./index.html?movieID=${movieID}'`)
+
     createFlippableImage(movieInfo)
     displayLocationsForVisualize(movieID)
     //displayBuyRentStreamInfo(movieProviders)

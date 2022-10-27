@@ -1,6 +1,17 @@
 const BASE_URL = config.api_base_url;
 const API_KEY = config.api_key;
+/*
+window.addEventListener("load", (event) => {
+    const URLparams = URLSearchParams(window.location.search);
+    const searchQuery = URLparams.get("searchQuery")
 
+    if (searchQuery !== undefined) {
+        searchMovies(searchQuery, 1);
+        const searchBar = document.getElementById("query")
+        searchBar.value = searchQuery;
+    }
+})
+*/
 async function searchMovies(searchKeyWord, page) {
   let data = [];
   try {
@@ -14,7 +25,7 @@ async function searchMovies(searchKeyWord, page) {
     boxes.innerHTML = "";
     for (let i = 0; i < data.length; i++) {
       console.log(data);
-      const streamingProviders = getStreamingProviders(data[i].id, getLocale());
+      const streamingProviders = await getStreamingProviders(data[i].id, getLocale());
       displayStreamingServices(
         streamingProviders["flatrate"],
         data[i].title, data[i].id);
