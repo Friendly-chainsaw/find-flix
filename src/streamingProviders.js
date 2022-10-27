@@ -4,6 +4,7 @@ async function getStreamingProviders(movie_id, regionID)
         try{
             const response = await fetch(`${BASE_URL}/movie/${movie_id}/watch/providers?api_key=${config.api_key}`)
             const data = await response.json()
+            console.log("streaming providers", data.results[regionID])
             if (data.results[regionID] === undefined) {
                 return {}
             }

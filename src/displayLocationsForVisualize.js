@@ -1,43 +1,36 @@
 const displayResult = document.getElementById("providers");
 
-async function displayLocationsForVisualize(movie_id) {
-  const location = getLocale();
+async function displayLocationsForVisualize(movie_id){
+    const location = getLocale();
 
-  const providers = await getStreamingProviders(movie_id, location);
+    const providers = await getStreamingProviders(movie_id, location);
 
-  if (providers) {
-    displayResult.classList.add("visualize-info");
+    if(providers){
+        displayResult.classList.add("visualize-info");
 
-    const movieName = document.createElement("h1");
-    let movieNameVar = await getMovieName(movie_id);
-    movieName.innerHTML = movieNameVar;
-    document.getElementById("about").innerHTML = movieNameVar;
-    displayResult.appendChild(movieName);
+        displayResult.appendChild(createText("h1", await getMovieName(movie_id)));
 
-    if (!providers.buy && !providers.flatrate && !providers.rent) {
-      const message = document.createElement("h2");
-      message.innerHTML = "Sorry! No information available for this film!";
-      displayResult.appendChild(message);
-    } else {
-      if (providers.buy.length > 0) {
-        const buy = document.createElement("h2");
-        buy.innerHTML = "Buy";
-        displayResult.appendChild(buy);
-        getProviders(providers.buy);
-      }
+        if(!providers.buy && !providers.flatrate && !providers.rent){
 
-      if (providers.flatrate.length > 0) {
-        const stream = document.createElement("h2");
-        stream.innerHTML = "Stream";
-        displayResult.appendChild(stream);
-        getProviders(providers.flatrate);
-      }
+            displayResult.appendChild(createText("h2", "Sorry! No information available for this film!"));
 
-      if (providers.rent.length > 0) {
-        rent.innerHTML = "Rent";
-        displayResult.appendChild(rent);
-        getProviders(providers.rent);
-      }
+        } else {
+            if(providers.buy.length > 0){
+
+                displayResult.appendChild(createText("h2", "Buy"));
+                getProviders(providers.buy);
+            }
+
+            if(providers.flatrate.length > 0){
+
+                displayResult.appendChild(createText("h2", "Stream"));
+                getProviders(providers.flatrate);
+            }
+
+            if(providers.rent.length > 0){
+                displayResult.appendChild(createText("h2", "Rent"));
+                getProviders(providers.rent);
+        }
     }
   }
 }
@@ -59,3 +52,4 @@ function createText(textHTML, text) {
   text.innerHTML = text;
   return result;
 }
+
