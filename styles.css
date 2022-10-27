@@ -58,10 +58,12 @@ element::-webkit-scrollbar {
     border-color: red;
     padding: 10px;
     transform: scale(0.9);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .theSearchDiv:hover {
-    background-color: rgb(34,34,34);
+    background: rgb(34,34,34);
+    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgb(34,34,34), transparent);
     transform: scale(98%);
 }
 .theSearchDiv:active {
