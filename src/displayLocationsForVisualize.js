@@ -30,22 +30,25 @@ async function displayLocationsForVisualize(movie_id){
             if(providers.rent.length > 0){
                 displayResult.appendChild(createText("h2", "Rent"));
                 getProviders(providers.rent);
+            }
         }
     }
-    }
-
 }
 
+async function getProviders(arrayProviders) {
+  if (arrayProviders) {
+    for (let i = 0; i < arrayProviders.length; i++) {
+      const newStreamingServiceImage = document.createElement("img");
+      newStreamingServiceImage.classList.add("providers");
 
-async function getProviders(arrayProviders){
-
-    if(arrayProviders){
-        for(let i = 0; i < arrayProviders.length; i++){
-            const newStreamingServiceImage = document.createElement("img");
-            newStreamingServiceImage.classList.add("providers");
-
-            newStreamingServiceImage.src = `https://image.tmdb.org/t/p/w500${arrayProviders[i].logo_path}`;
-            displayResult.appendChild(newStreamingServiceImage);
-        }
+      newStreamingServiceImage.src = `https://image.tmdb.org/t/p/w500${arrayProviders[i].logo_path}`;
+      displayResult.appendChild(newStreamingServiceImage);
     }
+  }
+}
+
+function createText(textHTML, text) {
+  const result = document.createElement(textHTML);
+  text.innerHTML = text;
+  return result;
 }
