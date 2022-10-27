@@ -1,6 +1,7 @@
 *::-webkit-scrollbar{
     display: none;
 }
+
 .movies {
     border: 5px;
     border-color: red;
@@ -18,6 +19,11 @@ element::-webkit-scrollbar {
     border-radius: 18px;
     margin-left: 5px;
     max-width: 86px;
+    transition: all 0.2s;
+}
+
+.providers:hover {
+    transform: scale(110%);
 }
 
 .visualize-info{
@@ -25,6 +31,7 @@ element::-webkit-scrollbar {
     color: white;
     position: relative;
     left: 31rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .search-results {
