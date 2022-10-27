@@ -3,17 +3,24 @@ async function displayBestMovies(page){
     console.log(result);
 
     const body = document.getElementById("card-div");
+    body.innerHTML = ""
 
     for(let i = 0; i< result.length; i++){
 
         const newCard = document.createElement("div");
         newCard.classList.add("card");
-
         var img = document.createElement('img');
-        img.src = `${config["image_base_url"]  + result[i].backdrop_path}`;
-        img.classList.add("card-image");
+        if (result[i].backdrop_path === null) {
+            img.src = "./logosAndIcons/qualityLogo.png";
+            img.classList.add("card-image-findflix-base");
+        } else {
+            img.src = `${config["image_base_url"]  + result[i].backdrop_path}`;
+            img.classList.add("card-image");
+        }
         newCard.appendChild(img);
-        newCard.appendChild(createText("h2", result[i].name));
+        var cardText = createText("h2", result[i].name)
+        cardText.classList.add("card-text")
+        newCard.appendChild(cardText);
 
         body.appendChild(newCard);
     }
