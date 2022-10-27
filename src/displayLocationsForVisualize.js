@@ -12,23 +12,32 @@ async function displayLocationsForVisualize(movie_id){
         movieName.innerHTML = await getMovieName(movie_id);
         displayResult.appendChild(movieName);
 
-        const buy = document.createElement("h2");
-        buy.innerHTML = "Buy";
-        displayResult.appendChild(buy);
+        if(!providers.buy && !providers.flatrate && !providers.rent){
+            const message = document.createElement("h2");
+            message.innerHTML = "Sorry! No information available for this film!";
+            displayResult.appendChild(message);
+        } else {
+            if(providers.buy.length > 0){
+                const buy = document.createElement("h2");
+                buy.innerHTML = "Buy";
+                displayResult.appendChild(buy);
+                getProviders(providers.buy);
+            }
 
-        getProviders(providers.buy);
+            if(providers.flatrate.length > 0){
 
-        const stream = document.createElement("h2");
-        stream.innerHTML = "Stream";
-        displayResult.appendChild(stream);
+                const stream = document.createElement("h2");
+                stream.innerHTML = "Stream";
+                displayResult.appendChild(stream);
+                getProviders(providers.flatrate);
+            }
 
-        getProviders(providers.flatrate);
-
-        const rent = document.createElement("h2");
-        rent.innerHTML = "Rent";
-        displayResult.appendChild(rent);
-
-        getProviders(providers.rent);
+            if(providers.rent.length > 0){
+            rent.innerHTML = "Rent";
+            displayResult.appendChild(rent);
+            getProviders(providers.rent);
+        }
+    }
     }
 
 }
