@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: repeat(var(--count), 40rem);
     overflow-x: scroll;
+    overflow-y: hidden;
     grid-auto-flow: column;
     scroll-snap-type: x proximity;
     scroll-behavior:smooth;
