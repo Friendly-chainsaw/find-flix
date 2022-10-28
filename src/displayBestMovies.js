@@ -2,6 +2,21 @@ window.addEventListener("load", (event) => {
     displayBestMovies(1)
 })
 
+const handleOnMouseMovePaginationBar = event => {
+    const {currentTarget: target} = event;
+    const rect = target.getBoundingClientRect(), x = event.clientX - rect.left, y = event.clientY-rect.top;
+    document.getElementById("barID").style.setProperty("--mouse-x-bar", `${x-40}px`)
+}
+
+/*
+const handleOnMouseOutPaginationBar = event => {
+    document.getElementById("barID").style.setProperty("transition", "0.5s ease-out")
+    document.getElementById("barID").style.setProperty("left", '-100px')
+}
+*/
+const pagination = document.getElementById("paginationView")
+pagination.onmousemove = event => handleOnMouseMovePaginationBar(event)
+
 async function displayBestMovies(page){
     const result = await getBestRatesMovies(page);
     console.log(result);
