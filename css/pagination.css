@@ -3,14 +3,14 @@
 
 .pagination {
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: transparent;
     display: flex;
     position: relative;
     overflow: hidden;
     margin: auto;
     justify-content: center;
-    position: relative;
-    top: 46rem;
+    bottom: 0px;
+    padding-top: 50px;
 }
 
 .pagination a{
@@ -18,8 +18,9 @@
     height: 80px;
     line-height: 80px;
     text-align: center;
-    color: #333;
-    font-size: 18px;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
     font-weight: 700;
     transition: .3s linear;
   }
@@ -35,37 +36,38 @@
     height: 4px;
     background-color: #eb4d4b;
     bottom: 0;
-    left: -100px;
-    transition: .4s linear;
+    left: var(--mouse-x-bar);
   }
 
+  /*
   .pagination a:nth-child(1):hover ~ .bar{
-    left: 200px;
+    left: 10%;
   }
 
   .pagination a:nth-child(2):hover ~ .bar{
-    left: 300px;
+    left: 20%;
   }
 
   .pagination a:nth-child(3):hover ~ .bar{
-    left: 400px;
+    left: 30%;
   }
 
   .pagination a:nth-child(4):hover ~ .bar{
-    left: 500px;
+    left: 40%;
   }
 
   .pagination a:nth-child(5):hover ~ .bar{
-    left: 600px;
+    left: 50%;
   }
 
   .pagination a:nth-child(6):hover ~ .bar{
-    left: 700px;
+    left: 60%;
   }
 
   .pagination a:nth-child(7):hover ~ .bar{
-    left: 800px;
+    left: 70%;
   }
   .pagination a:nth-child(8):hover ~ .bar{
-    left: 900px;
+    left: 80%;
   }
+*/

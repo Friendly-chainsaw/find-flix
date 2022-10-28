@@ -12,7 +12,7 @@ async function handleDisplayingInfo() {
   const backButton = document.querySelector("#backbutton");
   backButton.setAttribute(
     "onclick",
-    `location.href='./index.html?movieID=${movieID}'`
+    "history.go(-1); return false;"
   );
 
   createFlippableImage(movieInfo);
