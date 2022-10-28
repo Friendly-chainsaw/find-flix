@@ -19,7 +19,8 @@ async function displayUpcomingMovies(page) {
 
     for(let i = 0; i< result.length; i++){
         const newCard = document.createElement("div");
-        newCard.setAttribute("onclick", `location.href='movieInformation.html?movieID=${result[i].id}'`)
+        console.log(result[i].release_date)
+        newCard.setAttribute("onclick", `location.href='movieInformation.html?movieID=${result[i].id}&releaseDate=${result[i].release_date}'`)
         newCard.classList.add("upcomingMovie");
         var img = document.createElement('img');
         if (result[i].backdrop_path === null) {
@@ -30,8 +31,16 @@ async function displayUpcomingMovies(page) {
             img.classList.add("upcomingMovieImage");
         }
         newCard.appendChild(img);
-        var cardText = createText("h3", result[i].title)
-        newCard.appendChild(cardText);
+        let cardText = createText("h3", result[i].title)
+        let cardReleaseDate = createText("h5", result[i].release_date)
+        let textDiv = document.createElement("div")
+        textDiv.classList.add("upcomingMovieTextDiv")
+
+        cardText.classList.add("upcomingMovieTitle")
+        cardReleaseDate.classList.add("upcomingMovieReleaseDate")
+        textDiv.appendChild(cardText)
+        textDiv.appendChild(cardReleaseDate)
+        newCard.appendChild(textDiv);
         body.appendChild(newCard);
     }
 }
