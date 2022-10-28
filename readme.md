@@ -69,7 +69,7 @@ Contributors that made this possible:
 
 ## 👩‍👩‍👧‍👧 Demo
 
-![](<![](https://github.com/Friendly-chainsaw/find-flix/blob/dev/logosAndIcons/demo.gif)>)
+![](https://github.com/Friendly-chainsaw/find-flix/blob/dev/logosAndIcons/demo.gif)
 
 <!-- LICENSE -->
 
