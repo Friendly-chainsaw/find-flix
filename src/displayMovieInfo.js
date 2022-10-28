@@ -2,23 +2,6 @@ window.addEventListener("load", (event) => {
   handleDisplayingInfo();
 });
 async function handleDisplayingInfo() {
-<<<<<<< HEAD
-
-
-    const URLparams = new URLSearchParams(window.location.search);
-    const movieID = URLparams.get("movieID")
-
-    const movieInfo = await getAllMovieInfoById(movieID)
-    const movieProviders = await getStreamingProviders(movieID)
-    console.log("movieInfo", movieInfo)
-
-    const backButton = document.querySelector("#backbutton")
-    backButton.setAttribute("onclick", "history.go(-1); return false;")
-
-    createFlippableImage(movieInfo)
-    displayLocationsForVisualize(movieID)
-    //displayBuyRentStreamInfo(movieProviders)
-=======
   const URLparams = new URLSearchParams(window.location.search);
   const movieID = URLparams.get("movieID");
 
@@ -29,24 +12,18 @@ async function handleDisplayingInfo() {
   const backButton = document.querySelector("#backbutton");
   backButton.setAttribute(
     "onclick",
-    `location.href='./index.html?movieID=${movieID}'`
+    "history.go(-1); return false;"
   );
 
   createFlippableImage(movieInfo);
   displayLocationsForVisualize(movieID);
   //displayBuyRentStreamInfo(movieProviders)
->>>>>>> 66fa2bdd4e9ab7a3d373b3cfe733cb403656f644
 }
 
 function createFlippableImage(movieInfo) {
   //Adding neccessary divs for flippable image to the DOM
 
-<<<<<<< HEAD
-    console.log("movieInfo", movieInfo)
-    const imageOuterDiv = document.getElementById("flipImageOuterDivID")
-=======
   const imageOuterDiv = document.getElementById("flipImageOuterDivID");
->>>>>>> 66fa2bdd4e9ab7a3d373b3cfe733cb403656f644
 
   imageOuterDiv.innerHTML = "";
 

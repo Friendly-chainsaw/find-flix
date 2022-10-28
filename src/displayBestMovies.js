@@ -22,7 +22,7 @@ async function displayBestMovies(page){
             img.classList.add("card-image");
         }
         newCard.appendChild(img);
-        var cardText = createText("h2", result[i].title)
+        var cardText = createText("h3", result[i].title)
         cardText.classList.add("card-text")
         newCard.appendChild(cardText);
         body.appendChild(newCard);

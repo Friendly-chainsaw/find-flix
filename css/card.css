@@ -16,17 +16,18 @@
     justify-content: space-evenly;
     display: grid;
     grid-template-columns: 30% 30% 30%;
+    animation: fadeIn 3s;;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 920px) {
     #card-div {
         justify-content: space-evenly;
         grid-template-columns: 45% 45%;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     #card-div {
-        grid-template-columns: 100%;
+        grid-template-columns: 90%;
     }
 }
 

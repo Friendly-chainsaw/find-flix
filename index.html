@@ -18,14 +18,11 @@
   <body class="background-dark">
     <div id="mainSection" class="main-section">
       <!-- <h1 id="title">FindFlix!</h1> -->
-<<<<<<< HEAD
       <img id="title" src="./logosAndIcons/qualityLogo.png" alt=""/>
-      <button onclick="location.href='topRatedMovies.html'" class='switchingPagesButton'>Featured</button>
-=======
-
-      <img id="title" src="./logosAndIcons/qualityLogo.png" alt="" />
-
->>>>>>> 66fa2bdd4e9ab7a3d373b3cfe733cb403656f644
+      <div id="navBar">
+        <button onclick="location.href='topRatedMovies.html'" class='topRatedPageButton'>Top Rated</button>
+        <button onclick="location.href='upcomingMovies.html'" class='upcomingPageButton'>Upcoming</button>
+      </div>
       <form onsubmit="return false" id="form" class="formStyle">
         <input type="search" id="query" name="q" placeholder="Search..." />
         <button type="submit" id="search">Search</button>
@@ -36,6 +33,7 @@
     <script src="./src/getLocale.js"></script>
     <script src="./src/streamingProviders.js"></script>
     <script src="./src/getAllMovieInfo.js"></script>
+    <script src="./src/getUncoming.js"></script>
     <script src="./src/displayMovieInfo.js"></script>
     <script src="./src/displayStreamingProviders.js"></script>
     <script src="./src/displayLocationsForVisualize.js"></script>
