@@ -19,7 +19,6 @@ pagination.onmousemove = event => handleOnMouseMovePaginationBar(event)
 
 async function displayBestMovies(page){
     const result = await getBestRatesMovies(page);
-    console.log(result);
 
     const body = document.getElementById("card-div");
     body.innerHTML = ""
@@ -55,7 +54,6 @@ async function displayBestMovies(page){
 var elements = document.getElementsByClassName("pagination-number");
 
 function getNumber(event) {
-    console.log(event.target.innerHTML)
     const number = Number(event.target.innerHTML);
     displayBestMovies(number);
   }

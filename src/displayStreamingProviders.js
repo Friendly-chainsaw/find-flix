@@ -9,7 +9,6 @@ const handleOnMouseMoveSearchElement = event => {
 //Displays the available streaming services within the search bar functionality
 //param(retrievedStreamingServices List, movieTitle string)
 function displayStreamingServices(retrievedStreamingServices, movieTitle, movieID) {
-    console.log(retrievedStreamingServices)
     const searchResult = document.createElement("div");
     searchResult.classList.add("theSearchDiv")
     const title = document.createElement("h3")

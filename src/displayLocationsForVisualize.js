@@ -50,8 +50,6 @@ async function getProviders(arrayProviders) {
 
       newStreamingServiceImage.src = `https://image.tmdb.org/t/p/w500${arrayProviders[i].logo_path}`;
 
-      console.log(`https://image.tmdb.org/t/p/w500${arrayProviders[i].logo_path}`, arrayProviders[i].logo_path);
-
       switch(arrayProviders[i].logo_path){
         //amazon
         case "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg":
