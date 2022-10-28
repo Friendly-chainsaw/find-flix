@@ -1,6 +1,5 @@
 .card{
     background-color: transparent;
-    border:2px solid rgb(201, 54, 53);
     border-radius: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -17,6 +16,18 @@
     justify-content: space-evenly;
     display: grid;
     grid-template-columns: 30% 30% 30%;
+}
+
+@media screen and (max-width: 800px) {
+    #card-div {
+        justify-content: space-evenly;
+        grid-template-columns: 45% 45%;
+    }
+}
+@media screen and (max-width: 600px) {
+    #card-div {
+        grid-template-columns: 100%;
+    }
 }
 
 .card-image{
@@ -41,9 +52,9 @@
     display: block;
     height: 100%;
     margin: 0;
-    top: 0;
+    top:0px;
+    padding-top: 10px;
     opacity: 0;
-    padding-top: 24%;
     text-align: center;
     color: white;
     font-family: "Manrope", sans-serif;

@@ -10,9 +10,8 @@ async function displayBestMovies(page){
     body.innerHTML = ""
 
     for(let i = 0; i< result.length; i++){
-
         const newCard = document.createElement("div");
-        newCard.setAttribute("onclick", "location.href='movieInformation.html?movieID=${movieID}")
+        newCard.setAttribute("onclick", `location.href='movieInformation.html?movieID=${result[i].id}'`)
         newCard.classList.add("card");
         var img = document.createElement('img');
         if (result[i].backdrop_path === null) {
@@ -23,7 +22,7 @@ async function displayBestMovies(page){
             img.classList.add("card-image");
         }
         newCard.appendChild(img);
-        var cardText = createText("h2", result[i].name)
+        var cardText = createText("h2", result[i].title)
         cardText.classList.add("card-text")
         newCard.appendChild(cardText);
         body.appendChild(newCard);

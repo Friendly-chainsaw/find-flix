@@ -12,7 +12,7 @@ async function handleDisplayingInfo() {
     console.log("movieInfo", movieInfo)
 
     const backButton = document.querySelector("#backbutton")
-    backButton.setAttribute("onclick", `location.href='./index.html?movieID=${movieID}'`)
+    backButton.setAttribute("onclick", "history.go(-1); return false;")
 
     createFlippableImage(movieInfo)
     displayLocationsForVisualize(movieID)
@@ -22,6 +22,7 @@ async function handleDisplayingInfo() {
 function createFlippableImage(movieInfo) {
     //Adding neccessary divs for flippable image to the DOM
 
+    console.log("movieInfo", movieInfo)
     const imageOuterDiv = document.getElementById("flipImageOuterDivID")
 
     imageOuterDiv.innerHTML = ""

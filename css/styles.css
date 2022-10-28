@@ -110,14 +110,16 @@ element::-webkit-scrollbar {
     mask-image: linear-gradient(to bottom, black 0.01%, transparent 100%);
 }
 
-.topRatedMoviesPageTitle {
+.topMoviesPageTitle {
     top: 0px;
     text-align: center;
     font-size: 50px;
     font-family: "Manrope", sans-serif;
     color:rgb(201, 45, 45);
     text-decoration: underline;
+    margin-bottom: 0px;
     text-decoration-color: rgb(182, 182, 182);
+    margin-bottom: 20px;
 }
 
 .main-section{
@@ -223,7 +225,6 @@ element::-webkit-scrollbar {
     height: 40px;
     border-radius: 50%;
     font-size: 30px;
-    position: relative;
     background-color: transparent;
     border: 1px solid;
     border-color: rgb(201, 54, 53);
@@ -235,8 +236,32 @@ element::-webkit-scrollbar {
     transform: scale(0.97);
 }
 .backbuttonImage {
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     position: absolute;
-    width: 20px;
-    height: 20px;
-    transform-origin: center;
+}
+
+
+.switchingPagesButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 50px;
+    border: 1px black solid;
+    border-radius: 15px;
+    color: white;
+    background-color: transparent;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    transform: scale(0.9);
+    transition: all 0.2s
+}
+
+.switchingPagesButton:hover {
+    transform: scale(0.97);
+    background-color: rgb(34,34,34);
 }
