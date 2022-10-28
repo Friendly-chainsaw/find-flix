@@ -14,8 +14,7 @@ window.addEventListener("load", (event) => {
 */
 function createErrorMessage(errorMessage) {
   const para = document.createElement("p");
-  const node = document.createTextNode(errorMessage
-  );
+  const node = document.createTextNode(errorMessage);
   para.setAttribute("id", "error");
   para.appendChild(node);
   const element = document.getElementById("movies");
@@ -38,33 +37,53 @@ async function searchMovies(searchKeyWord, page) {
     boxes.innerHTML = "";
     for (let i = 0; i < data.length; i++) {
       console.log(data);
-      const streamingProviders = await getStreamingProviders(data[i].id, getLocale());
+      const streamingProviders = await getStreamingProviders(
+        data[i].id,
+        getLocale()
+      );
       displayStreamingServices(
         streamingProviders["flatrate"],
-        data[i].title, data[i].id);
+        data[i].title,
+        data[i].id
+      );
     }
   } catch (error) {
-    createErrorMessage("Oops! Try another keyword of phrase")
+    createErrorMessage("Oops! Try another keyword of phrase");
   }
   return data;
 }
 
+function activateSearch(type) {
+  if (type === "static") {
+    if (document.getElementById("search")) {
+      document.getElementById("search").addEventListener("click", function () {
+        const str = document.getElementById("query").value;
+        if (str === null || str.match(/^ *$/) !== null) {
+          createErrorMessage("Oops! The search bar appears to be empty.");
+        } else {
+          searchMovies(str, 1);
+        }
+      });
+    }
+  } else if (type === "dynamic") {
+    document.getElementById("query").addEventListener("keydown", function () {
+      if (document.getElementById("query").value.length != 0) {
+        // doesn't allow app to query the api unless the text box is !empty.
+        searchMovies(document.getElementById("query").value, 1);
+      } else {
+        let movieID = document.querySelector("#movies");
+        movieID.innerHTML = "";
+      }
+    });
+  }
+}
 
-document.getElementById("search").addEventListener("click", function () {
-  const str = document.getElementById("query").value;
-  if (str === null || str.match(/^ *$/) !== null) { createErrorMessage("Oops! The search bar appears to be empty.") }
-  else {searchMovies(str, 1);}
-});
+activateSearch("static");
 
-document.getElementById("form").addEventListener("active", () => {
-  document.getElementById("form").classList.toggle("formAnimation")
-})
-// document.getElementById("query").addEventListener("keydown", function () {
-//   if (document.getElementById("query").value.length != 0) {
-//     // doesn't allow app to query the api unless the text box is !empty.
-//     searchMovies(document.getElementById("query").value, 1);
-//   } else {
-//     let movieID = document.querySelector("#movies");
-//     movieID.innerHTML = "";
-//   }
+// document.getElementById("form").addEventListener("active", () => {
+//   document.getElementById("form").classList.toggle("formAnimation")
+// })
+
+// document.querySelector("#query").addEventListener("focus", () => {
+// document.getElementById("mainSection").classList.toggle("moveUp");
 // });
