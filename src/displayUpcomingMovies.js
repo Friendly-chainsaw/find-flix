@@ -12,8 +12,6 @@ pagination.onmousemove = event => handleOnMouseMovePaginationBar(event)
 
 async function displayUpcomingMovies(page) {
     const result = await getUncoming(page);
-    console.log(result);
-
     const body = document.getElementById("upcomingMoviesContainer");
     body.innerHTML = ""
 
@@ -41,7 +39,6 @@ async function displayUpcomingMovies(page) {
 var elements = document.getElementsByClassName("pagination-number");
 
 function getNumber(event) {
-    console.log(event.target.innerHTML)
     const number = Number(event.target.innerHTML);
     displayUpcomingMovies(number);
   }

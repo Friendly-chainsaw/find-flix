@@ -36,9 +36,7 @@ async function searchMovies(searchKeyWord, page) {
     const boxes = document.querySelector("#movies");
     boxes.innerHTML = "";
 
-    console.log("search data", data)
     for (let i = 0; i < data.length; i++) {
-      console.log(data);
       const streamingProviders = await getStreamingProviders(
         data[i].id,
         getLocale()
