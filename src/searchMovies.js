@@ -59,6 +59,8 @@ function activateSearch(type) {
       document.getElementById("search").addEventListener("click", function () {
         const str = document.getElementById("query").value;
         if (str === null || str.match(/^ *$/) !== null) {
+          const boxes = document.querySelector("#movies");
+          boxes.innerHTML = "";
           createErrorMessage("Oops! The search bar appears to be empty.");
         } else {
           searchMovies(str, 1);
