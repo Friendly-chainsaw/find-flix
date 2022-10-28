@@ -13,6 +13,8 @@
   </p>
 </p>
 
+<a href="https://friendly-chainsaw.github.io/find-flix/">Visit the page here!</a>
+
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary><h2 style="display: inline-block"> 📋 Table of Contents</h2></summary>
