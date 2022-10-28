@@ -1,3 +1,27 @@
 #upcomingMoviesContainer {
-    height: auto;
+    height:100%;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(var(--count), 50%);
+    overflow-x: scroll;
+    grid-auto-flow: column;
+    scroll-snap-type: x proximity;
+}
+.upcomingMovie {
+    display: block;
+    position: relative;
+    flex: 0 0 400px;
+    scroll-snap-align: center;
+    width: fit-content;
+    max-width: 1200px;
+    height: 850px;
+    transform: scale(1);
+    scroll-snap-align: center;
+}
+
+.upcomingMovieImage {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    left: 0px;
 }
