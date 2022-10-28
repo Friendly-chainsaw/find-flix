@@ -4,8 +4,10 @@
   <h1 align="center">FindFlix!<img style="width: 50px" src="logosAndIcons/popcorn.png"></h1>
 
   <p align="center">
-    Use Findflix to avoid scrolling on Netflix 😄
+    Use Findflix and avoid scrolling on Netflix 😄
     <br />
+    <a href="https://friendly-chainsaw.github.io/find-flix/index.html" target="_blank">Visit Us</a>
+    .
     <a href="https://github.com/Friendly-chainsaw/find-flix/issues">Report Bug</a>
     ·
     <a href="https://github.com/Friendly-chainsaw/find-flix/issues">Request Feature</a>
@@ -67,7 +69,7 @@ Contributors that made this possible:
 
 ## 👩‍👩‍👧‍👧 Demo
 
-![](linkTodemo)
+![](<![](https://github.com/Friendly-chainsaw/find-flix/logosAndIcons/demo.gif)>)
 
 <!-- LICENSE -->
 
