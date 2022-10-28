@@ -19,7 +19,6 @@ pagination.onmousemove = event => handleOnMouseMovePaginationBar(event)
 
 async function displayBestMovies(page){
     const result = await getBestRatesMovies(page);
-    console.log(result);
 
     const body = document.getElementById("card-div");
     body.innerHTML = ""
@@ -38,8 +37,15 @@ async function displayBestMovies(page){
         }
         newCard.appendChild(img);
         var cardText = createText("h3", result[i].title)
+        let cardTextDiv = document.createElement("div");
         cardText.classList.add("card-text")
-        newCard.appendChild(cardText);
+        cardTextDiv.classList.add("card-text-div");
+
+        let cardRating = createText("h4", result[i].vote_average)
+        cardRating.classList.add("card-rating")
+        cardTextDiv.appendChild(cardText)
+        cardTextDiv.appendChild(cardRating)
+        newCard.appendChild(cardTextDiv);
         body.appendChild(newCard);
     }
 
@@ -48,7 +54,6 @@ async function displayBestMovies(page){
 var elements = document.getElementsByClassName("pagination-number");
 
 function getNumber(event) {
-    console.log(event.target.innerHTML)
     const number = Number(event.target.innerHTML);
     displayBestMovies(number);
   }

@@ -46,24 +46,39 @@
     mask-image: linear-gradient(to bottom, black 0.01%, transparent 100%);
 }
 
-.card-text {
+.card-text-div {
     position: absolute;
-    background-color: black;
     width: 100%;
-    display: block;
+    top: 0px;
+    left: 0px;
     height: 100%;
-    margin: 0;
-    top:0px;
-    padding-top: 10px;
-    opacity: 0;
     text-align: center;
-    color: white;
-    font-family: "Manrope", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 10;
+    background-color: black;
+    opacity: 0;
+}
+
+.card-rating {
+    width: 100%;
+    text-align: center;
+    color: antiquewhite;
+    font-family: "Manrope", sans-serif;
     transition: all 1s ease-out;
 }
 
-.card:hover .card-text {
+.card-text {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    transition: all 1s ease-out;
+}
+
+.card:hover .card-text-div {
     opacity: 0.9;
     transition: all 0.1s;
 }

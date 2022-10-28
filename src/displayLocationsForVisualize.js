@@ -1,9 +1,9 @@
 const displayResult = document.getElementById("providers");
 let movieName;
-
 async function displayLocationsForVisualize(movie_id) {
   const location = getLocale();
   movieName = await getMovieName(movie_id);
+
 
   const providers = await getStreamingProviders(movie_id, location);
 
@@ -12,25 +12,33 @@ async function displayLocationsForVisualize(movie_id) {
 
     displayResult.appendChild(createText("h1", await getMovieName(movie_id)));
 
-    if (!providers.buy && !providers.flatrate && !providers.rent) {
-      displayResult.appendChild(
-        createText("h2", "Sorry! No information available for this film!")
-      );
+
+    if(!providers.buy && !providers.flatrate && !providers.rent){
+        if (isNew) {
+          const URLparams = new URLSearchParams(window.location.search);
+          const dateOfFilmRelease = URLparams.get("releaseDate");
+          displayResult.appendChild(createText("h1", `Available ${dateOfFilmRelease}`));
+        } else {
+          displayResult.appendChild(createText("h2", "Sorry! No information available for this film!"));
+        }
+
     } else {
-      if (providers.buy.length > 0) {
-        displayResult.appendChild(createText("h2", "Buy"));
-        getProviders(providers.buy);
-      }
+        if(providers.buy !== undefined){
 
-      if (providers.flatrate.length > 0) {
-        displayResult.appendChild(createText("h2", "Stream"));
-        getProviders(providers.flatrate);
-      }
+            displayResult.appendChild(createText("h2", "Buy"));
+            getProviders(providers.buy);
+        }
 
-      if (providers.rent.length > 0) {
-        displayResult.appendChild(createText("h2", "Rent"));
-        getProviders(providers.rent);
-      }
+
+        if (providers.flatrate.length > 0) {
+          displayResult.appendChild(createText("h2", "Stream"));
+          getProviders(providers.flatrate);
+        }
+
+        if(providers.rent.length !== undefined){
+            displayResult.appendChild(createText("h2", "Rent"));
+            getProviders(providers.rent);
+        }
     }
   }
 }
@@ -42,13 +50,7 @@ async function getProviders(arrayProviders) {
       newStreamingServiceImage.classList.add("providers");
 
       newStreamingServiceImage.src = `https://image.tmdb.org/t/p/w500${arrayProviders[i].logo_path}`;
-
-      console.log(
-        `https://image.tmdb.org/t/p/w500${arrayProviders[i].logo_path}`,
-        arrayProviders[i].logo_path
-      );
-
-      switch (arrayProviders[i].logo_path) {
+      switch(arrayProviders[i].logo_path){
         //amazon
         case "/5NyLm42TmCqCMOZFvH4fcoSNKEW.jpg":
           addClick(

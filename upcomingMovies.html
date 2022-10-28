@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <title>Document</title>
-  </head>
-  <body class="background-dark">
-    <img id="subtitle" src="./logosAndIcons/qualityLogo.png" alt="" />
-    <div id="subNavBar">
-      <button onclick="location.href='index.html'" class="searchPageButton">
-        Search
-      </button>
-      <button
-        onclick="location.href='topRatedMovies.html'"
-        class="topRatedPageButton"
-      >
-        Top Rated
-      </button>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <link
+      rel="shortcut icon"
+      href="./logosAndIcons/upcoming.png"
+      type="image/x-icon"
+    />
+    <title>Upcoming</title>
+</head>
+<body class="background-dark">
+    <img id="title" src="./logosAndIcons/qualityLogo.png" alt=""/>
+    <div id="navBar">
+        <button onclick="location.href='index.html'" class='searchPageButton'>Search</button>
+        <button onclick="location.href='topRatedMovies.html'" class='topRatedPageButton'>Top Rated</button>
     </div>
     <h1 class="secondaryPageTitle">Upcoming</h1>
 
-    <div id="upcomingMoviesContainer"></div>
+    <div id="upcomingMoviesContainer">
+    </div>
 
     <div id="paginationView" class="pagination">
       <a href=""><i class="fas fa-chevron-left"></i></a>
@@ -43,6 +42,7 @@
     <script src="./src/displayMovieInfo.js"></script>
     <script src="./src/displayStreamingProviders.js"></script>
     <script src="./src/displayLocationsForVisualize.js"></script>
+    <script src="./src/displayUpcomingMovies.js"></script>
     <script src="./src/searchMovies.js"></script>
     <script src="./src/common.js"></script>
     <script src="./src/getBestRatedMovies.js"></script>
