@@ -2,7 +2,7 @@
     height:100%;
     width:100%;
     display: grid;
-    grid-template-columns: repeat(var(--count), 50%);
+    grid-template-columns: repeat(var(--count), 40rem);
     overflow-x: scroll;
     grid-auto-flow: column;
     scroll-snap-type: x proximity;
@@ -24,4 +24,6 @@
     width: auto;
     height: 100%;
     left: 0px;
+    min-width: 38rem;
+    max-width: 38rem;
 }
