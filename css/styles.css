@@ -479,4 +479,6 @@ h2 {
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   z-index: 3;
+  opacity: 0;
+  visibility: hidden;
 }
