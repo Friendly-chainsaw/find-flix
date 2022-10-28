@@ -463,19 +463,20 @@ h2 {
   background-color: transparent;
   border-color: transparent;
   transform: scale(0.1);
+  top: 22px;
   border-radius: 50%;
   transition: 1s;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
 }
 
-#shuffleButtonImage {
+.shuffleButtonImage {
+  transform: scale(4.8);
   background-color: transparent;
   cursor: pointer;
   border-color: transparent;
   transition: 0.5s;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
-  background-color: rgb(34, 34, 34);
   z-index: 3;
 }
