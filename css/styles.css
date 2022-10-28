@@ -53,7 +53,7 @@ element::-webkit-scrollbar {
 
 .search-results {
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     max-height: 450px;
     width: auto;
     height:auto;
@@ -76,8 +76,8 @@ element::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
     transition: 0.3s ease;
-    border: 1px solid;
-    border-color: red;
+    border: 3px solid;
+    border-color: rgb(51, 51, 51);
     padding: 10px;
     transform: scale(0.9);
     font-family:"Manrope", sans-serif
@@ -114,7 +114,7 @@ element::-webkit-scrollbar {
 }
 
 #title{
-    animation: fadeIn 6s;
+    animation: fadeIn 1s;
     max-height: auto;
     max-width: auto;
     width: 520px;
@@ -156,17 +156,20 @@ element::-webkit-scrollbar {
 }
 
 #query{
+    animation: fadeIn 1s;
     width: 100%;
     height: 46px;
     line-height: 46px;
     font-size: 1.1em;
-    color: rgba(0,0,0,0.5);
+    color: rgba(255, 255, 255, 1);
     border: none;
+    background-color: rgba(83, 83, 83, 0.2);
     border-radius: 30px;
     padding: 10px 20px;
 }
 
 #search{
+    animation: fadeIn 1s;
     display: inline-flex;
     justify-content: center;
     align-content: center;
@@ -315,6 +318,7 @@ element::-webkit-scrollbar {
 
 h1 {
     animation: fadeIn 3s;
+    color: #dfdbdb;
     font-size: 1.7em;
     font-family: sans-serif;
     font-weight: 340;
@@ -322,6 +326,7 @@ h1 {
 }
 
 h2 {
+    color: #cacaca;
     animation: fadeIn 5s;
     font-size: 1.2em;
     font-family: sans-serif;
