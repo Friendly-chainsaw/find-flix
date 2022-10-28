@@ -1,7 +1,7 @@
 const displayResult = document.getElementById("providers");
 let movieName;
 
-async function displayLocationsForVisualize(movie_id){
+async function displayLocationsForVisualize(movie_id, isNew){
     const location = getLocale();
     movieName =  await getMovieName(movie_id);
 
@@ -13,8 +13,13 @@ async function displayLocationsForVisualize(movie_id){
         displayResult.appendChild(createText("h1", await getMovieName(movie_id)));
 
         if(!providers.buy && !providers.flatrate && !providers.rent){
-
-            displayResult.appendChild(createText("h2", "Sorry! No information available for this film!"));
+            if (isNew) {
+              const URLparams = new URLSearchParams(window.location.search);
+              const dateOfFilmRelease = URLparams.get("releaseDate");
+              displayResult.appendChild(createText("h1", `Available ${dateOfFilmRelease}`));
+            } else {
+              displayResult.appendChild(createText("h2", "Sorry! No information available for this film!"));
+            }
 
         } else {
             if(providers.buy.length > 0){

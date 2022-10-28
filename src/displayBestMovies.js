@@ -38,8 +38,15 @@ async function displayBestMovies(page){
         }
         newCard.appendChild(img);
         var cardText = createText("h3", result[i].title)
+        let cardTextDiv = document.createElement("div");
         cardText.classList.add("card-text")
-        newCard.appendChild(cardText);
+        cardTextDiv.classList.add("card-text-div");
+
+        let cardRating = createText("h4", result[i].vote_average)
+        cardRating.classList.add("card-rating")
+        cardTextDiv.appendChild(cardText)
+        cardTextDiv.appendChild(cardRating)
+        newCard.appendChild(cardTextDiv);
         body.appendChild(newCard);
     }
 

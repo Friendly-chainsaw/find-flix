@@ -15,9 +15,13 @@ async function handleDisplayingInfo() {
     "history.go(-1); return false;"
   );
 
+  const release = URLparams.get("releaseDate");
   createFlippableImage(movieInfo);
-  displayLocationsForVisualize(movieID);
-  //displayBuyRentStreamInfo(movieProviders)
+  if (release !== null) {
+    displayLocationsForVisualize(movieID, true);
+  } else {
+    displayLocationsForVisualize(movieID, false);
+  }  //displayBuyRentStreamInfo(movieProviders)
 }
 
 function createFlippableImage(movieInfo) {
@@ -61,10 +65,14 @@ function createFlippableImage(movieInfo) {
   const backOfImagePlotSummary = document.createElement("p");
   backOfImagePlotSummary.innerHTML = movieInfo["plug-summary"];
 
+  const backOfImageReleaseDate = document.createElement("h4")
+  backOfImageReleaseDate.innerHTML = movieInfo["release"]
+
   backOfImageDiv.append(
     backOfImageTitle,
     backOfImageRating,
-    backOfImagePlotSummary
+    backOfImagePlotSummary,
+    backOfImageReleaseDate
   );
 }
 

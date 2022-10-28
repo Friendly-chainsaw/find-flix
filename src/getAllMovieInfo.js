@@ -9,7 +9,7 @@ async function getAllMovieInfoById(movie_id){
             const response = await fetch(`${BASE_URL}/movie/${movie_id}?api_key=${config.api_key}&language=en-US`);
             const data = await response.json();
             console.log("data", data)
-            const result = {"title" : data.title, "plug-summary": data.overview, "picture": data.poster_path, "rating": data.vote_average};
+            const result = {"title" : data.title, "plug-summary": data.overview, "picture": data.poster_path, "rating": data.vote_average, "release": data.release_date};
             return result;
         } catch (err){
             console.log(err);
