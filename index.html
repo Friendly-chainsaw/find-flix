@@ -18,10 +18,21 @@
   <body class="background-dark">
     <div id="mainSection" class="main-section">
       <!-- <h1 id="title">FindFlix!</h1> -->
-      <img id="title" src="./logosAndIcons/qualityLogo.png" alt=""/>
+      <img id="title" src="./logosAndIcons/qualityLogo.png" alt="" />
       <div id="navBar">
-        <button onclick="location.href='topRatedMovies.html'" class='topRatedPageButton'>Top Rated</button>
-        <button onclick="location.href='upcomingMovies.html'" class='upcomingPageButton'>Upcoming</button>
+        <button
+          onclick="location.href='topRatedMovies.html'"
+          class="topRatedPageButton"
+        >
+          Top Rated
+        </button>
+        <button
+          onclick="location.href='upcomingMovies.html'"
+          class="upcomingPageButton"
+        >
+          Upcoming
+        </button>
+        <button id="shuffle">I'm Feeling Lucky</button>
       </div>
       <form onsubmit="return false" id="form" class="formStyle">
         <input type="search" id="query" name="q" placeholder="Search..." />
@@ -40,5 +51,6 @@
     <script src="./src/searchMovies.js"></script>
     <script src="./src/common.js"></script>
     <script src="./src/getBestRatedMovies.js"></script>
+    <script src="./src/randomMovie.js"></script>
   </body>
 </html>
