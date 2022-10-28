@@ -22,19 +22,20 @@ async function displayLocationsForVisualize(movie_id, isNew){
             }
 
         } else {
-            if(providers.buy.length > 0){
+          console.log("reaching providers")
+            if(providers.buy !== undefined){
 
                 displayResult.appendChild(createText("h2", "Buy"));
                 getProviders(providers.buy);
             }
 
-            if(providers.flatrate.length > 0){
+            if(providers.flatrate !== undefined){
 
                 displayResult.appendChild(createText("h2", "Stream"));
                 getProviders(providers.flatrate);
             }
 
-            if(providers.rent.length > 0){
+            if(providers.rent.length !== undefined){
                 displayResult.appendChild(createText("h2", "Rent"));
                 getProviders(providers.rent);
             }
